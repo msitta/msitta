@@ -1,4 +1,3 @@
-## Hi there 👋
 <img src="assets/banner_perfil.png" width="100%">
 <!--
 **msitta/msitta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
