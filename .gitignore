@@ -1,0 +1,6 @@
+
+# Chaves de API - NUNCA commitar
+APIs.txt
+*.key
+.env
+
