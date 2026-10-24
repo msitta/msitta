@@ -1,0 +1,139 @@
+/* The Synthwave Horizon — estilos dos componentes.
+   Nenhum valor mora aqui: cada propriedade aponta para o token, com o valor do
+   manual como fallback para o caso de a folha de tokens ainda nao ter sido
+   servida. Editar um token na pagina continua vencendo. */
+
+.ds {
+  --ds-surface: var(--deep-violet-space, #1a0b2e);
+  --ds-card: var(--deep-imperial-purple, #2a144e);
+  --ds-cyan: var(--synthwave-cyan, #30c0b7);
+  --ds-pink: var(--neon-pink, #ee227d);
+  --ds-orange: var(--sunset-orange, #fa8057);
+  --ds-yellow: var(--yellow-accent, #fad009);
+  --ds-cream: var(--pastel-cream, #fefecc);
+  --ds-lavender: var(--soft-lavender, #bb99ff);
+  --ds-grid: var(--indigo, #4b0082);
+  --ds-r-sm: var(--radius-sm, 4px);
+  --ds-r-md: var(--radius-md, 8px);
+  --ds-s-1: var(--space-1, 4px);
+  --ds-s-2: var(--space-2, 8px);
+  --ds-s-4: var(--space-4, 16px);
+  --ds-s-5: var(--space-5, 24px);
+  --ds-f-sans: var(--font-sans, "IBM Plex Sans", system-ui, -apple-system, sans-serif);
+  --ds-f-mono: var(--font-mono, "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace);
+}
+
+/* KpiCard */
+
+.ds-kpi {
+  background: var(--ds-card);
+  border: 1px solid var(--ds-cyan);
+  border-radius: var(--ds-r-md);
+  padding: var(--ds-s-4);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ds-kpi[data-series="pink"] { border-color: var(--ds-pink); }
+
+.ds-kpi__kicker {
+  font-family: var(--ds-f-sans);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ds-cyan);
+  margin: 0 0 var(--ds-s-2);
+}
+
+.ds-kpi[data-series="pink"] .ds-kpi__kicker { color: var(--ds-pink); }
+
+.ds-kpi__value {
+  font-family: var(--ds-f-mono);
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--ds-cream);
+  margin: 0;
+}
+
+/* Painel de grafico, comum a BarChart e TrendLine */
+
+.ds-panel {
+  background: var(--ds-card);
+  border-radius: var(--ds-r-md);
+  padding: var(--ds-s-4);
+  box-sizing: border-box;
+}
+
+.ds-panel__title {
+  font-family: var(--ds-f-sans);
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--ds-cream);
+  margin: 0 0 var(--ds-s-5);
+}
+
+.ds-panel__plot { display: block; width: 100%; height: auto; }
+
+.ds-cat {
+  font-family: var(--ds-f-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  fill: var(--ds-lavender);
+}
+
+.ds-axis {
+  font-family: var(--ds-f-mono);
+  font-size: 11px;
+  fill: var(--ds-lavender);
+}
+
+.ds-axis-title {
+  font-family: var(--ds-f-sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  fill: var(--ds-lavender);
+}
+
+.ds-value {
+  font-family: var(--ds-f-mono);
+  font-size: 13px;
+  font-weight: 500;
+  fill: var(--ds-cream);
+}
+
+.ds-gridline {
+  stroke: var(--ds-grid);
+  stroke-width: 1;
+}
+
+/* BarChart */
+
+.ds-bar {
+  fill: var(--ds-cyan);
+  rx: var(--ds-r-sm);
+}
+
+.ds-bar[data-series="pink"] { fill: var(--ds-pink); }
+.ds-bar[data-series="orange"] { fill: var(--ds-orange); }
+.ds-bar[data-record="true"] { fill: var(--ds-yellow); }
+
+/* TrendLine */
+
+.ds-series {
+  fill: none;
+  stroke: var(--ds-cyan);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.ds-series[data-series="pink"] { stroke: var(--ds-pink); }
+
+.ds-dot { fill: var(--ds-cyan); }
+.ds-dot[data-series="pink"] { fill: var(--ds-pink); }
+.ds-dot[data-alert="true"] { fill: var(--ds-orange); }

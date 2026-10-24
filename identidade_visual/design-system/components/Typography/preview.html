@@ -1,0 +1,196 @@
+<!-- @dsCard group="Fundamentos" height=780 page subtitle="As três famílias aplicadas, servidas pelos arquivos do sistema" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  /* As faces vêm dos arquivos servidos pelo próprio sistema, em fonts/.
+     Nada de Google Fonts: o TTF daqui cobre os acentos do português. */
+  @font-face {
+    font-family: "Press Start 2P";
+    src: url("../../fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Sans";
+    src: url("../../fonts/IBMPlexSans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Sans";
+    src: url("../../fonts/IBMPlexSans-500.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Sans";
+    src: url("../../fonts/IBMPlexSans-600.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../../fonts/IBMPlexMono-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../../fonts/IBMPlexMono-500.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../../fonts/IBMPlexMono-600.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+  }
+
+  :root {
+    --surface: var(--deep-violet-space, #1a0b2e);
+    --card: var(--deep-imperial-purple, #2a144e);
+    --cyan: var(--synthwave-cyan, #30c0b7);
+    --cream: var(--pastel-cream, #fefecc);
+    --lavender: var(--soft-lavender, #bb99ff);
+    --grid: var(--indigo, #4b0082);
+    --s-2: var(--space-2, 8px);
+    --s-4: var(--space-4, 16px);
+    --s-5: var(--space-5, 24px);
+    --s-6: var(--space-6, 32px);
+    --r-md: var(--radius-md, 8px);
+    --display: var(--font-display, "Press Start 2P", "Courier New", monospace);
+    --sans: var(--font-sans, "IBM Plex Sans", system-ui, sans-serif);
+    --mono: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+  }
+
+  body {
+    margin: 0;
+    padding: var(--s-5);
+    background: var(--surface);
+    font-family: var(--sans);
+  }
+
+  .sheet {
+    background: var(--card);
+    border-radius: var(--r-md);
+    padding: var(--s-5);
+    max-width: 912px;
+    box-sizing: border-box;
+  }
+
+  .group + .group { margin-top: var(--s-6); border-top: 1px solid var(--grid); padding-top: var(--s-5); }
+
+  .group-name {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin: 0 0 var(--s-4);
+  }
+
+  .row { display: grid; grid-template-columns: 104px 1fr; gap: var(--s-4); align-items: baseline; }
+  .row + .row { margin-top: var(--s-4); }
+
+  .token {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--lavender);
+  }
+
+  .specimen { color: var(--cream); margin: 0; }
+
+  /* Os estilos abaixo repetem o que tokens.json declara, para que esta
+     amostra mostre a face certa mesmo antes de a folha de tokens existir. */
+  .display-lg { font-family: var(--display); font-size: 24px; line-height: 34px; font-weight: 400; letter-spacing: 0.02em; }
+  .display-sm { font-family: var(--display); font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0.02em; }
+  .glyphs { font-family: var(--display); font-size: 14px; line-height: 26px; word-break: break-all; }
+  .kicker { font-family: var(--sans); font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+  .heading { font-family: var(--sans); font-size: 17px; line-height: 24px; font-weight: 600; }
+  .body { font-family: var(--sans); font-size: 15px; line-height: 22px; font-weight: 400; }
+  .body-sm { font-family: var(--sans); font-size: 13px; line-height: 20px; font-weight: 400; color: var(--lavender); }
+  .label { font-family: var(--sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.04em; color: var(--lavender); }
+  .caption { font-family: var(--sans); font-size: 11px; line-height: 16px; font-weight: 400; color: var(--lavender); }
+  .metric-xl { font-family: var(--mono); font-size: 28px; line-height: 32px; font-weight: 600; }
+  .metric { font-family: var(--mono); font-size: 20px; line-height: 26px; font-weight: 600; }
+  .value { font-family: var(--mono); font-size: 13px; line-height: 18px; font-weight: 500; }
+  .axis { font-family: var(--mono); font-size: 11px; line-height: 14px; font-weight: 400; color: var(--lavender); }
+</style>
+</head>
+<body>
+  <div class="sheet">
+
+    <section class="group">
+      <p class="group-name">Display &middot; Press Start 2P</p>
+
+      <div class="row">
+        <span class="token">display-lg</span>
+        <p class="specimen display-lg">THE SYNTHWAVE HORIZON</p>
+      </div>
+      <div class="row">
+        <span class="token">display-sm</span>
+        <p class="specimen display-sm">APLICAÇÃO EM DASHBOARD</p>
+      </div>
+      <div class="row">
+        <span class="token">glifos</span>
+        <p class="specimen glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>0123456789 ÁÀÂÃÇÉÊÍÓÔÕÚÜ</p>
+      </div>
+    </section>
+
+    <section class="group">
+      <p class="group-name">Texto &middot; IBM Plex Sans</p>
+
+      <div class="row">
+        <span class="token">kicker</span>
+        <p class="specimen kicker">Métrica chave</p>
+      </div>
+      <div class="row">
+        <span class="token">heading</span>
+        <p class="specimen heading">Proficiência em Tecnologias de Dados</p>
+      </div>
+      <div class="row">
+        <span class="token">body</span>
+        <p class="specimen body">O tráfego do portfólio cresceu seis vezes no semestre, com uma queda isolada em abril.</p>
+      </div>
+      <div class="row">
+        <span class="token">body-sm</span>
+        <p class="specimen body-sm">Série secundária: visualizações únicas por mês.</p>
+      </div>
+      <div class="row">
+        <span class="token">label</span>
+        <p class="specimen label">Power BI / Tableau</p>
+      </div>
+      <div class="row">
+        <span class="token">caption</span>
+        <p class="specimen caption">Fonte: Métricas de Portfólio Simuladas (2026)</p>
+      </div>
+    </section>
+
+    <section class="group">
+      <p class="group-name">Dados &middot; IBM Plex Mono</p>
+
+      <div class="row">
+        <span class="token">metric-xl</span>
+        <p class="specimen metric-xl">100%</p>
+      </div>
+      <div class="row">
+        <span class="token">metric</span>
+        <p class="specimen metric">15 Dashboards</p>
+      </div>
+      <div class="row">
+        <span class="token">value</span>
+        <p class="specimen value">720&nbsp;&nbsp;580&nbsp;&nbsp;310</p>
+      </div>
+      <div class="row">
+        <span class="token">axis</span>
+        <p class="specimen axis">0 100 200 300 400 500 600 700 800</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

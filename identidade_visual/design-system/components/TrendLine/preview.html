@@ -1,0 +1,41 @@
+<!-- @dsCard group="Gráficos" height=380 subtitle="Série temporal, queda marcada em sunset-orange" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: var(--space-5, 24px);
+    background: var(--deep-violet-space, #1a0b2e);
+  }
+  #root { max-width: 692px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    (function () {
+      var e = React.createElement;
+      var DS = window.SynthwaveHorizon;
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        e(DS.TrendLine, {
+          title: 'Tráfego do Portfólio (Mensal)',
+          max: 800,
+          axisTitle: 'Meses de 2026',
+          ariaLabel: 'Visualizações únicas por mês de 2026: janeiro 120, fevereiro 250, ' +
+            'março 420, abril 310 (queda), maio 580, junho 720.',
+          data: [
+            { label: 'Jan', value: 120 },
+            { label: 'Fev', value: 250 },
+            { label: 'Mar', value: 420 },
+            { label: 'Abr', value: 310, alert: true },
+            { label: 'Mai', value: 580 },
+            { label: 'Jun', value: 720 }
+          ]
+        })
+      );
+    })();
+  </script>
+</body>
+</html>
