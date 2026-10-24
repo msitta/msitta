@@ -1,4 +1,4 @@
-<img src="assets/banner_perfil.png" width="100%">
+<img src="assets/banner_synthwave_horizon.png" width="100%" alt="Marco Sitta — Data &amp; Business Analyst">
 
 ## Data & Business Analyst
 
