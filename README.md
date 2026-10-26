@@ -6,6 +6,18 @@ For twenty years I sold and managed relationships in Brazilian retail banking. T
 
 I now do that with data. **Every project below ends in a decision, not a dashboard.**
 
+<img src="assets/regra_60_30_10.png" width="100%" alt="60/30/10 colour proportion of the Synthwave Horizon system">
+
+### Blind Spot · can a field everyone trusts be quietly empty?
+
+**[scrdata-borrower-size](https://github.com/msitta/scrdata-borrower-size)**
+
+The Central Bank of Brazil's public credit registry carries a borrower-size field, so analysts slice business lending by company size. Across 90 months and 25.9 million rows the field degrades by type of lender: no size on file for 40.3% of fintech credit against 3.1% for banks, rising 8.5 pp a year. It is not a defect. A bank underwrites against declared revenue; a fintech underwrites against transaction flow and has no reason to capture revenue at all. The empty field is a fingerprint of how the credit decision was made.
+
+→ *Any analysis grouped by borrower size silently drops the fastest-growing segment. The series measures how much business credit is granted without looking at revenue.*
+
+Real national data, a decision log that records the original hypothesis and why it did not survive, and the counter-reading stated in the same table rather than buried: in absolute value, banks hold R$ 67.8 bn of credit with no size on file against the fintech segment's R$ 1.4 bn.
+
 The four repositories are one series, ordered the way an analytics function matures — from *can we trust the data* to *what should we do*.
 
 <img src="assets/regra_60_30_10.png" width="100%" alt="60/30/10 colour proportion of the Synthwave Horizon system">
