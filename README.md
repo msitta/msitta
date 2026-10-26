@@ -12,7 +12,7 @@ I now do that with data. **Every project below ends in a decision, not a dashboa
 
 **[scrdata-borrower-size](https://github.com/msitta/scrdata-borrower-size)**
 
-The Central Bank of Brazil's public credit registry carries a borrower-size field, so analysts slice business lending by company size. Across 90 months and 25.9 million rows the field degrades by type of lender: no size on file for 40.3% of fintech credit against 3.1% for banks, rising 8.5 pp a year. It is not a defect. A bank underwrites against declared revenue; a fintech underwrites against transaction flow and has no reason to capture revenue at all. The empty field is a fingerprint of how the credit decision was made.
+The Central Bank of Brazil's public credit registry carries a borrower-size field, so analysts slice business lending by company size. Across 90 months and 25.9 million rows the field degrades by type of lender: no size on file for 40.3% of fintech credit against 3.1% for banks, up from 5.0% in 2020. It is not a defect. A bank underwrites against declared revenue; a fintech underwrites against transaction flow and has no reason to capture revenue at all. The empty field is a fingerprint of how the credit decision was made.
 
 → *Any analysis grouped by borrower size silently drops the fastest-growing segment. The series measures how much business credit is granted without looking at revenue.*
 
