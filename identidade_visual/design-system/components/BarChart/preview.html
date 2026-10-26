@@ -1,0 +1,40 @@
+<!-- @dsCard group="Gráficos" height=380 subtitle="Barras horizontais, recorde em yellow-accent" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: var(--space-5, 24px);
+    background: var(--deep-violet-space, #1a0b2e);
+  }
+  #root { max-width: 692px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    (function () {
+      var e = React.createElement;
+      var DS = window.SynthwaveHorizon;
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        e(DS.BarChart, {
+          title: 'Proficiência em Tecnologias de Dados',
+          unit: '%',
+          axisTitle: 'Proficiência (%)',
+          ariaLabel: 'Proficiência por tecnologia: Power BI e Tableau 92 por cento, ' +
+            'SQL Database 88, Python com Pandas 85, Data Modeling 82, ETL Pipelines 78.',
+          data: [
+            { label: 'Power BI / Tableau', value: 92 },
+            { label: 'SQL Database', value: 88 },
+            { label: 'Python (Pandas)', value: 85 },
+            { label: 'Data Modeling', value: 82 },
+            { label: 'ETL Pipelines', value: 78 }
+          ]
+        })
+      );
+    })();
+  </script>
+</body>
+</html>

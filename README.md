@@ -1,4 +1,4 @@
-<img src="assets/banner_perfil.png" width="100%">
+<img src="assets/banner_synthwave_horizon.png" width="100%" alt="Marco Sitta — Data &amp; Business Analyst">
 
 ## Data & Business Analyst
 
@@ -8,7 +8,7 @@ I now do that with data. **Every project below ends in a decision, not a dashboa
 
 The four repositories are one series, ordered the way an analytics function matures — from *can we trust the data* to *what should we do*.
 
----
+<img src="assets/regra_60_30_10.png" width="100%" alt="60/30/10 colour proportion of the Synthwave Horizon system">
 
 ### 1 · Can the data carry the question?
 
@@ -44,13 +44,13 @@ LTV by cohort, CAC by channel, ROI. The channel taking most of the budget had th
 
 Chapters 1 and 2 share a domain on purpose: the same call-centre operation, two different questions.
 
----
+<img src="assets/regra_60_30_10.png" width="100%" alt="60/30/10 colour proportion of the Synthwave Horizon system">
 
 **Stack** — Python (pandas, NumPy, scikit-learn) · matplotlib & seaborn · Jupyter · Tableau · Git
 
 **Languages** — Portuguese (native) · English (fluent, former teacher and translator)
 
----
+<img src="assets/regra_60_30_10.png" width="100%" alt="60/30/10 colour proportion of the Synthwave Horizon system">
 
 **Relocating to Reggio Emilia, Italy, in 2027.**
 *Italian citizenship — no visa sponsorship required.*

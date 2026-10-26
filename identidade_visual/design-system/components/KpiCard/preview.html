@@ -1,0 +1,45 @@
+<!-- @dsCard group="Painel" height=190 subtitle="Métrica única, etiqueta na cor da série" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: var(--space-5, 24px);
+    background: var(--deep-violet-space, #1a0b2e);
+  }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5, 24px); }
+  .note {
+    font-family: var(--font-sans, "IBM Plex Sans", system-ui, sans-serif);
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--soft-lavender, #bb99ff);
+    margin: var(--space-4, 16px) 0 0;
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    (function () {
+      var e = React.createElement;
+      var DS = window.SynthwaveHorizon;
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        e(React.Fragment, null,
+          e('div', { className: 'row' },
+            e(DS.KpiCard, { label: 'Métrica chave', value: '100% Automatizado' }),
+            e(DS.KpiCard, {
+              label: 'Projetos de portfólio',
+              value: '15 Dashboards Ativos',
+              series: 'pink'
+            })
+          ),
+          e('p', { className: 'note' },
+            'Etiqueta na cor da série, valor sempre em pastel-cream.')
+        )
+      );
+    })();
+  </script>
+</body>
+</html>

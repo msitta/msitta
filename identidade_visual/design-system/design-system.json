@@ -1,0 +1,69 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Prototipo": {
+      "files": {
+        "dashboard-performance.png": {
+          "blob": "e155601cb1b9ee1f4627db501bfa5eeb",
+          "name": "dashboard-performance.png",
+          "size": 86730,
+          "type": "image/png"
+        }
+      },
+      "name": "Prototipo",
+      "order": [
+        "dashboard-performance.png"
+      ],
+      "tile": "l"
+    }
+  },
+  "blobs": {
+    "fonts/PressStart2P-Regular.ttf": {
+      "blob": "6a0d7c4b36ce0a3d4c16956f7643d824",
+      "name": "fonts/PressStart2P-Regular.ttf",
+      "sha256": "8d0248e41694fdd875dbcde859ee1bae5982ecfdc6c7e5e451b48950d29ba95a",
+      "size": 116008,
+      "type": "font/ttf"
+    },
+    "fonts/PressStart2P-Regular~20~282~29.ttf": {
+      "blob": "6a0d7c4b36ce0a3d4c16956f7643d824",
+      "name": "fonts/PressStart2P-Regular (2).ttf",
+      "sha256": "8d0248e41694fdd875dbcde859ee1bae5982ecfdc6c7e5e451b48950d29ba95a",
+      "size": 116008,
+      "type": "font/ttf"
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-24T17:59:16Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [
+    "Prototipo"
+  ],
+  "lastChange": {
+    "at": "2026-10-24T18:25:27Z",
+    "by": "Marco",
+    "note": "Fontes servidas pelo sistema e amostra tipografica",
+    "via": "Claude"
+  },
+  "layout": "files",
+  "libraries": [
+    {
+      "global": "React",
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "global": "ReactDOM",
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "namespace": "SynthwaveHorizon",
+  "sections": {},
+  "title": "The Synthwave Horizon"
+}

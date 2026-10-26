@@ -1,0 +1,91 @@
+<!-- @dsCard height=300 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --surface: var(--deep-violet-space, #1a0b2e);
+    --card: var(--deep-imperial-purple, #2a144e);
+    --cyan: var(--synthwave-cyan, #30c0b7);
+    --pink: var(--neon-pink, #ee227d);
+    --yellow: var(--yellow-accent, #fad009);
+    --cream: var(--pastel-cream, #fefecc);
+    --lavender: var(--soft-lavender, #bb99ff);
+    --r-md: var(--radius-md, 8px);
+    --s-2: var(--space-2, 8px);
+    --f-display: var(--font-display, "Press Start 2P", "Courier New", monospace);
+    --f-sans: var(--font-sans, "IBM Plex Sans", system-ui, sans-serif);
+  }
+  html, body { margin: 0; padding: 0; background: var(--surface); }
+  .cover { position: relative; width: 960px; height: 300px; background: var(--surface); overflow: hidden; }
+  .cover svg { display: block; width: 960px; height: 96px; }
+  .block { rx: var(--r-md); }
+  .b-card { fill: var(--card); }
+  .b-cyan { fill: var(--cyan); }
+  .b-pink { fill: var(--pink); }
+  .b-yellow { fill: var(--yellow); }
+  .pix { fill: var(--surface); }
+  .text { position: absolute; left: 48px; top: 128px; width: 864px; }
+  .name {
+    font-family: var(--f-display);
+    font-size: 56px;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+    margin: 0;
+  }
+  .tagline {
+    font-family: var(--f-sans);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--lavender);
+    margin: var(--s-2) 0 0;
+  }
+</style>
+</head>
+<body>
+  <div class="cover">
+    <!-- blocos: deep-imperial-purple 288x96, synthwave-cyan 240x96, neon-pink 192x96, yellow-accent 96x96 — larguras em multiplos de space-7 (48px), altura space-7 x 2, gaps de space-2 -->
+    <!-- arranjo: faixa superior de bandas desiguais, da mais larga a mais estreita, com o nome embaixo (esqueleto top-band: "THE SYNTHWAVE HORIZON" em Press Start 2P nao cabe em 440px nem a 64px) -->
+    <!-- padrao: escada de 26 quadrados de space-4 (16px) a passo space-6 (32px), em quatro degraus, recortada no ground por cima das bandas — escolhida porque a face de display do sistema e Press Start 2P, de grade 8-bit: a escada desenha em pixels o "horizon" do nome -->
+    <!-- escalas: space-2 8, space-4 16, space-6 32, space-7 48 e multiplos; cantos em radius-md 8 -->
+    <svg viewBox="0 0 960 96" aria-hidden="true">
+      <rect class="block b-card" x="0" y="0" width="288" height="96"></rect>
+      <rect class="block b-cyan" x="296" y="0" width="240" height="96"></rect>
+      <rect class="block b-pink" x="544" y="0" width="192" height="96"></rect>
+      <rect class="block b-yellow" x="744" y="0" width="96" height="96"></rect>
+      <rect class="pix" x="16" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="48" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="80" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="112" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="144" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="176" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="208" y="64" width="16" height="16"></rect>
+      <rect class="pix" x="240" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="272" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="304" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="336" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="368" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="400" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="432" y="48" width="16" height="16"></rect>
+      <rect class="pix" x="464" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="496" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="528" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="560" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="592" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="624" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="656" y="32" width="16" height="16"></rect>
+      <rect class="pix" x="688" y="16" width="16" height="16"></rect>
+      <rect class="pix" x="720" y="16" width="16" height="16"></rect>
+      <rect class="pix" x="752" y="16" width="16" height="16"></rect>
+      <rect class="pix" x="784" y="16" width="16" height="16"></rect>
+      <rect class="pix" x="816" y="16" width="16" height="16"></rect>
+    </svg>
+    <div class="text">
+      <p class="name">THE SYNTHWAVE<br>HORIZON</p>
+      <p class="tagline">Sistema de cores e identidade visual para análise de dados.</p>
+    </div>
+  </div>
+</body>
+</html>
